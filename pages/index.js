@@ -12,14 +12,14 @@ export default function Home({exploreData,cardData}) {
       {/* header */}
       <Header/>
       <Banner/>
-      <main className='max-w-7xl mx-auto sm:px-16'>
+       <main className='md:max-w-7xl mx-auto sm:px-16'>
         <div className='pt-6'>
           
           <h2 className='text-4xl font-semibold pb-5'>Explore Nearby</h2>
           
           <div className="grid grid-cols-1 sm:grid-cols-2
           md:grid-cols-3 lg:grid-cols-4 ">
-              {/* pull some data from a server -API endpoints */}
+            
              {exploreData.map(({img,distance,location},id)=><SmallCard 
              img={img} 
              distance={distance}
@@ -28,18 +28,18 @@ export default function Home({exploreData,cardData}) {
         </div>
 
         <div className='pt-6 mt-4'>
-          {/* mediumcard */}
+          
           <h1 className='text-4xl font-semibold pb-5'>Live anywhere</h1>
           <div className='flex pt-6 space-x-2 overflow-scroll lg:overflow-hidden ' style={{}}>
             {cardData?.map(({img,title},id)=><MediumCard img={img} title={title} />)}
           </div>
-        </div>
+        </div> 
         <LargeCard url="https://a0.muscache.com/im/pictures/2595054e-d1d9-4fde-8046-58d51fcb3164.jpg?im_w=1440"/>
         <footer>
-          
+
         </footer>
 
-      </main>
+      </main> 
       {/* Banner */}
 
     </div>

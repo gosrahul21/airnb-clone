@@ -2,9 +2,9 @@ import Image from 'next/image'
 import {SearchIcon, GlobeAltIcon, MenuIcon, UserCircleIcon} from '@heroicons/react/solid'
 function Header(){
     return (
-        <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 md:px-10">
+        <header className="sticky top-0 z-50 w-full md:grid md:grid-cols-3 bg-white shadow-md p-5 md:px-10">
             {/* left */}
-            <div className="flex items-center h-10 relative cursor-pointer my-auto">
+            <div className="hidden md:flex items-center h-10 relative cursor-pointer my-auto">
                 <Image src="https://links.papareact.com/qd3" 
                 layout="fill"
                 objectFit="contain"
@@ -12,7 +12,7 @@ function Header(){
                 />
             </div>
             {/* middle */}
-            <div className="flex items-center cursor-pointer justify-center rounded-full md:border-2 p-2">
+            <div className="flex items-center cursor-pointer justify-center rounded-full border-2 p-2">
                 <input 
                     type="text" 
                     placeholder="Start your Search"
@@ -23,7 +23,7 @@ function Header(){
                 cursor-pointer rounded-full p-2'/>
             </div>
             {/* right */}
-            <div className="flex items-center justify-end text-gray-500 space-x-4">
+            <div className="hidden md:flex items-center justify-end text-gray-500 space-x-4">
                 <p className="hidden md:inline cursor-pointer">Become a host</p>
                 <GlobeAltIcon className="h-6"/>
 
