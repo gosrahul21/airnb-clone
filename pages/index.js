@@ -1,6 +1,6 @@
 import { RssIcon } from '@heroicons/react/solid';
 import Head from 'next/head'
-import { Header,Banner,SmallCard,MediumCard,LargeCard } from '../components';
+import { Header,Banner,SmallCard,MediumCard,LargeCard,Footer } from '../components';
 
 export default function Home({exploreData,cardData}) {
   return (
@@ -35,13 +35,13 @@ export default function Home({exploreData,cardData}) {
           </div>
         </div> 
         <LargeCard url="https://a0.muscache.com/im/pictures/2595054e-d1d9-4fde-8046-58d51fcb3164.jpg?im_w=1440"/>
-        <footer>
 
-        </footer>
 
       </main> 
-      {/* Banner */}
-
+      <footer className='w-full mt-8 bg-gray-100 '>
+          <Footer/>
+      </footer>
+      
     </div>
   )
 }
