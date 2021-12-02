@@ -10,7 +10,7 @@ export default function Home({exploreData,cardData}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* header */}
-      <Header/>
+      <Header sticky={false} HeaderPart={<h1>la lila lo</h1>} />
       <Banner/>
        <main className='md:max-w-7xl mx-auto sm:px-16'>
         <div className='pt-6'>
