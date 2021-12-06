@@ -2,8 +2,10 @@ import Image from 'next/image'
 
 import { useEffect,useState } from 'react';
 import {SearchIcon, GlobeAltIcon, MenuIcon, UserCircleIcon} from '@heroicons/react/solid'
+import { SearchIcon as SearchIconOutline } from '@heroicons/react/outline';
 import {DateRangePicker} from 'react-dates'
 import { useRouter } from 'next/router'
+
 
 function Header({sticky}){
     
@@ -37,16 +39,30 @@ function Header({sticky}){
             </div>
             {/* middle */}
             <div className='flex flex-col items-center justify-center'>
-            <div className="flex items-center bg-white cursor-pointer justify-center rounded-full border-2 p-2">
+            <div className="p-1 flex items-center bg-white cursor-pointer justify-center w-full rounded-full border-2 sm:p-2">
+                <SearchIcon onClick={()=>router.push({
+                        pathname:'search',
+                        query:{
+                            location:"ranchi",
+                            district:"Jharkhand"
+                        }
+                    })}
+                    className='sm:hidden h-10 text-[#FE595E] cursor-pointer rounded-full p-2'/>
                 <input 
                     type="text" 
                     placeholder="Start your Search"
                     value={searchInput}
                     onClick={()=>setShowCalen(true)}
                     onChange={(e)=>setSearchInput(e.target.value)}
-                    className="outline-none flex-grow cursor-pointer text-gray-800"
+                    className={`outline-none flex-grow cursor-pointer text-gray-800 ml-2`}
                 />
-                <SearchIcon 
+                <SearchIcon onClick={()=>router.push({
+                    pathname:'search',
+                    query:{
+                        location:"ranchi",
+                        district:"Jharkhand"
+                    }
+                })}
                 className='hidden md:inline h-8  bg-red-400 text-white 
                 cursor-pointer rounded-full p-2'/>
             </div>
