@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { useEffect,useState } from 'react';
 import {SearchIcon, GlobeAltIcon, MenuIcon, UserCircleIcon} from '@heroicons/react/solid'
 import {DateRangePicker} from 'react-dates'
+import { useRouter } from 'next/router'
 
 function Header({sticky}){
     
@@ -12,6 +13,7 @@ function Header({sticky}){
     const [endDate,setEndDate] = useState(null);
     const [focus,setFocus] = useState(null)
     const [showCalen,setShowCalen] = useState(false)
+    const router = useRouter();
 
     useEffect(()=>{
         onscroll = ()=>{
@@ -26,7 +28,7 @@ function Header({sticky}){
     return (
         <header className={` ${show?'sticky shadow-sm bg-white':'fixed bg-transparent text-white transition '}  w-full ${sticky&&'sticky'} md:grid md:grid-cols-3 top-0 z-50  p-5 md:px-10`}>
             {/* left */}
-            <div className="hidden md:flex items-center h-10 relative cursor-pointer my-auto">
+            <div onClick={()=>router.push('/')} className="hidden md:flex items-center h-10 relative cursor-pointer my-auto">
                 <Image src="https://links.papareact.com/qd3" 
                 layout="fill"
                 objectFit="contain"
