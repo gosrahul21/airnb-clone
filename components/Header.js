@@ -28,7 +28,7 @@ function Header({sticky}){
 
 
     return (
-        <header className={` ${show?'sticky shadow-sm bg-white':'fixed bg-transparent text-white transition '}  w-full ${sticky&&'sticky'} md:grid md:grid-cols-3 top-0 z-50  p-5 md:px-10`}>
+        <header className={`fixed ${show?' shadow-sm bg-white':' bg-transparent text-white  '}  w-full ${sticky&&'sticky'} md:grid md:grid-cols-3 transition transform ease-out duration-300 top-0 z-50  p-5 md:px-10`}>
             {/* left */}
             <div onClick={()=>router.push('/')} className="hidden md:flex items-center h-10 relative cursor-pointer my-auto">
                 <Image src="https://links.papareact.com/qd3" 

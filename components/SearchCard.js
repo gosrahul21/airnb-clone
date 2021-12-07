@@ -28,8 +28,8 @@ function SearchCard({data}) {
 
                     <p className='text-xs sm:text-sm font-semibold'><StarIcon className="inline sm:text-sm text-red-500 h-5 w-5 mr-1"/>{star}<span className="font-light text-gray-800">(65 reviews)</span></p>
                     <div>
-                        <h1 className="font-bold">₹{price}<span className='font-thin text-base'>/night</span></h1>
-                        <p className="text-sm hover:underline">₹{total}total</p>
+                        <h1 className="font-bold">₹{price}<span className='font-thin text-base'></span></h1>
+                        <p className="text-sm hover:underline">{total}</p>
                     </div>
                 </div>
             </div>

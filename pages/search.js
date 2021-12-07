@@ -1,4 +1,4 @@
-import { Header,Footer } from "../components"
+import { Header,Footer,Map } from "../components"
 import {SearchCard} from '../components'
 import {useParams} from 'react-router-dom'
 
@@ -30,12 +30,15 @@ function search({searchResults}) {
         <div className='w-full'>
             <Header sticky={true} HeaderPart={headerPart} />
             {headerPart}
-            <main className='flex justify-center sm:justify-start'>
+            <main className='flex xl:grid xl:grid-cols-2 justify-center sm:justify-start'>
                 <section className="flex">
                     <div className="">
                         <p className="p-4 ">
                         26 stays in Ranchi
                         </p>
+                        {searchResults.map((data,id)=>(
+                            <SearchCard key={id} data={data} />
+                        ))}
                         {searchResults.map((data,id)=>(
                             <SearchCard key={id} data={data} />
                         ))}
@@ -47,9 +50,10 @@ function search({searchResults}) {
 
                     </div>
                     
-                    <div>
-                          
-                    </div>
+                    
+                </section>
+                <section className="hidden xl:flex sticky h-[100vh] top-32">
+                         {searchResults&& <Map searchResults={searchResults} />}
                 </section>
 
             </main>
