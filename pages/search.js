@@ -7,7 +7,7 @@ function search({searchResults}) {
     const button = "px-4 py-1 text-sm rounded-2xl border-[1px] cursor-pointer whitespace-nowrap"
     // console.log('params',useParams())
     const headerPart = (
-        <section className='p-1 sticky top-20 flex-nowrap overflow-x-auto bg-white z-50 flex sm:p-2 md:p-4 w-full shadow-sm'>
+        <section className='p-1 sticky top-20 flex-nowrap overflow-x-auto bg-white z-10 flex sm:p-2 md:p-4 w-full shadow-sm'>
             <div className="flex px-2 space-x-2 border-r-[1px] border-gray-200">
                 <p className={button}>Price</p>
                 <p className={button}>Type of place </p> 
